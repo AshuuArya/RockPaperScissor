@@ -1,0 +1,198 @@
+/* Dark Theme Background */
+body {
+  background-color: #252525;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling the Animated Title */
+.game-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+  height: 3rem;
+  overflow: hidden;
+  color: #0fffc2; /* Neon cyan */
+  text-shadow: 0 0 1px #ffffff, 0 0 7px #000000;
+}
+
+/* Title Animation */
+.game-title span {
+  position: relative;
+  opacity: 0;
+  animation: fadeInOut 3s infinite;
+}
+
+.game-title span:nth-child(1) { animation-delay: 0s; } /* Rock */
+.game-title span:nth-child(2) { animation-delay: 0.9s; } /* Paper */
+.game-title span:nth-child(3) { animation-delay: 1.9s; } /* Scissors */
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(0); }
+  40% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 0; }
+}
+
+/* Game Container */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* Game Buttons */
+.game-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease, transform 0.2s ease-in-out, box-shadow 0.5s ease-in-out;;
+  background: #0fffc2; /* Darker background */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.game-button:hover {
+  background: #202020;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #0fffc2, 0 0 13px #0fffc2;
+}
+
+/* Icons */
+.move-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 20%;
+  transition: transform 0.5s ease-in-out, filter 0.2s ease-in-out;
+  
+}
+
+.game-button:hover .move-icon {
+  transform: scale(1.1);
+  filter: blur(2px) brightness(.2); /* Reduces blur and brightens slightly */
+}
+
+/* Button Text */
+.game-button span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; /* White text for better visibility */
+  font-weight: bold;
+  font-size: 1.3em;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.game-button:hover span {
+  opacity: 1;
+}
+
+
+/* Score & Result Display */
+.js-result, .js-moves, .js-score {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #0fffc2;
+  text-shadow: 0 0 10px #0fffc2;
+}
+
+
+/* Reset Button */
+.button {
+  background: #ffffff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+  
+}
+
+.lable {
+  line-height: 20px;
+  font-size: 17px;
+  color: #1e1e1e;
+  letter-spacing: 1px;
+}
+
+
+/* SVG Icon */
+.svg-icon {
+  width: 20px;
+  height: 20px;
+  display: left;
+ 
+}
+
+.button:hover {
+  background: #dcdcdc;
+  box-shadow: 0 0 6px #01e4c6;
+}
+
+.button:hover .svg-icon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+
+
+
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  .game-container {
+    flex-direction: column;
+  }
+
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .move-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .js-result, .js-moves, .js-score {
+    font-size: 1.2rem;
+  }
+}
