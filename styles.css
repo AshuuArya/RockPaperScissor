@@ -1,6 +1,6 @@
 /* Dark Theme Background */
 body {
-  background-color: #252525;
+  background-color: #f7fff6;
   color: #ffffff;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -14,8 +14,8 @@ body {
   position: relative;
   height: 3rem;
   overflow: hidden;
-  color: #0fffc2; /* Neon cyan */
-  text-shadow: 0 0 1px #ffffff, 0 0 7px #000000;
+  color: #146161; /* Neon cyan */
+  text-shadow: 0 0 1px #ffffff, 0 0 7px #d0ffe4;
 }
 
 /* Title Animation */
@@ -61,15 +61,15 @@ body {
   border-radius: 50%;
   position: relative;
   overflow: hidden;
-  transition: background 0.4s ease, transform 0.2s ease-in-out, box-shadow 0.5s ease-in-out;;
-  background: #0fffc2; /* Darker background */
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;;
+  background: #589595; /* Darker background */
+  box-shadow: 0 0 30px #589595b9;
 }
 
 .game-button:hover {
-  background: #202020;
+  background: #253f3f;
   transform: scale(1.1);
-  box-shadow: 0 0 20px #0fffc2, 0 0 13px #0fffc2;
+  box-shadow: 0 0 20px #ffffff, 0 0 20px #1c1c1c;
 }
 
 /* Icons */
@@ -95,7 +95,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff; /* White text for better visibility */
+  color: #e8fefe; /* White text for better visibility */
   font-weight: bold;
   font-size: 1.3em;
   opacity: 0;
@@ -111,8 +111,8 @@ body {
 .js-result, .js-moves, .js-score {
   font-size: 1.5rem;
   margin-top: 15px;
-  color: #0fffc2;
-  text-shadow: 0 0 10px #0fffc2;
+  color: #2eb4b4;
+  text-shadow: 0 0 1px #5895958d;
 }
 
 
@@ -128,13 +128,13 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background 0.3s ease-in-out;
-  
+  box-shadow: 0 0 10px #000000;
 }
 
 .lable {
   line-height: 20px;
   font-size: 17px;
-  color: #1e1e1e;
+  color: #000000;
   letter-spacing: 1px;
 }
 
@@ -148,8 +148,8 @@ body {
 }
 
 .button:hover {
-  background: #dcdcdc;
-  box-shadow: 0 0 6px #01e4c6;
+  background: #e8ffff83;
+  box-shadow: 0 0 6px #589595;
 }
 
 .button:hover .svg-icon {
@@ -165,12 +165,6 @@ body {
     transform: rotate(-360deg);
   }
 }
-
-
-
-
-
-
 
 /* Responsive Layout */
 @media (max-width: 600px) {
