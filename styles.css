@@ -14,8 +14,8 @@ body {
   position: relative;
   height: 3rem;
   overflow: hidden;
-  color: #146161; /* Neon cyan */
-  text-shadow: 0 0 1px #ffffff, 0 0 7px #d0ffe4;
+  color: #ffffff; /* Neon cyan */
+  text-shadow: 0  2px #ffffff, 0 0 7px #d0ffe4;
 }
 
 /* Title Animation */
@@ -62,14 +62,14 @@ body {
   position: relative;
   overflow: hidden;
   transition: background 0.2s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;;
-  background: #589595; /* Darker background */
-  box-shadow: 0 0 30px #589595b9;
+  background: #d9ffff; /* Darker background */
+  box-shadow: 0 0 20px #7b7b7b;
 }
 
 .game-button:hover {
-  background: #253f3f;
+  background: #525252;
   transform: scale(1.1);
-  box-shadow: 0 0 20px #ffffff, 0 0 20px #1c1c1c;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #1c1c1c;
 }
 
 /* Icons */
@@ -111,14 +111,14 @@ body {
 .js-result, .js-moves, .js-score {
   font-size: 1.5rem;
   margin-top: 15px;
-  color: #2eb4b4;
+  color: #fff0f0;
   text-shadow: 0 0 1px #5895958d;
 }
 
 
 /* Reset Button */
 .button {
-  background: #ffffff;
+  background: #ffffffbe;
   color: #000;
   border: none;
   padding: 10px 20px;
@@ -128,7 +128,7 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background 0.3s ease-in-out;
-  box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 4px #ffffff;
 }
 
 .lable {
@@ -148,8 +148,8 @@ body {
 }
 
 .button:hover {
-  background: #e8ffff83;
-  box-shadow: 0 0 6px #589595;
+  background: #ffffff;
+  box-shadow: 0 0 10px #fafafa;
 }
 
 .button:hover .svg-icon {
@@ -188,5 +188,73 @@ body {
 
   .js-result, .js-moves, .js-score {
     font-size: 1.2rem;
+  }
+}
+
+/* Background */ 
+.container {
+  position: absolute;
+  inset: -1em;
+  --c: 7px;
+  background-color: #000;
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      #00000000 1.5px,
+      #000000 0 var(--c),
+      #ffffff00 var(--c)
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      #0000 1px,
+      #000 0 var(--c),
+      #0000 var(--c)
+    ),
+    radial-gradient(circle at 50% 50%, #f00, #f000 60%),
+    radial-gradient(circle at 50% 50%, #ff0, #ff00 30%),
+    radial-gradient(circle at 50% 50%, #0f0, #0f00 6%),
+    radial-gradient(ellipse at 50% 50%, #00f, #00f0 30%);
+  background-size:
+    12px 20.7846097px,
+    12px 20.7846097px,
+    200% 200%,
+    200% 200%,
+    200% 200%,
+    200% 20.7846097px;
+  --p: 0px 0px, 6px 10.39230485px;
+  background-position:
+    var(--p),
+    0% 0%,
+    0% 0%,
+    0% 0px;
+  animation:
+    wee 60s linear infinite,
+    filt 6s linear infinite;
+}
+
+@keyframes filt {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes wee {
+  0% {
+    background-position:
+      var(--p),
+      800% 400%,
+      1000% -400%,
+      -1200% -600%,
+      400% 41.5692194px;
+  }
+  to {
+    background-position:
+      var(--p),
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
   }
 }
